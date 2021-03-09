@@ -9,18 +9,19 @@ const char* fizzbuzz_say(int number)
 {
 	memset(fizzbuzz_output, 0, sizeof(fizzbuzz_output));
 
-	if(((number%3) && (number%5))==0){
-		printf("Number %d FizzBuzz\n", number);
+	if(((number%3)==0 && (number%5)==0)){
+		sprintf(fizzbuzz_output, "FizzBuzz");
 	}
 	else if((number%3)==0){
-		printf("Number %d Fizz\n", number);
+		sprintf(fizzbuzz_output, "Fizz");
+
 	}
 	else if((number%5)==0){
-		printf("Number %d Buzz\n", number);
+		sprintf(fizzbuzz_output, "Buzz");
 	}
 	else{
-		printf("Number %d\n", number);
-
+		sprintf(fizzbuzz_output, "%d", number);
+	}
 
 	return fizzbuzz_output;
 }
