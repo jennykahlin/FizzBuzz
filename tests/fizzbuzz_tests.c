@@ -1,4 +1,4 @@
-#include "..\\src\fizzbuzz.h"
+#include "..\src\fizzbuzz.h"
 
 #include "unity.h"
 
@@ -70,6 +70,46 @@ void test_fizzbuzz_12(void)
 	TEST_ASSERT_EQUAL_STRING("11", fizzbuzz_say(11));
 }
 
+void test_fizzbuzz_fizz(void){
+	TEST_ASSERT_EQUAL_STRING("Fizz", fizzbuzz_say(4));
+	TEST_ASSERT_EQUAL_STRING("Fizz", fizzbuzz_say(18));
+	TEST_ASSERT_EQUAL_STRING("Fizz", fizzbuzz_say(34));
+}
+
+void test_fizzbuzz_buzz(void){
+	TEST_ASSERT_EQUAL_STRING("Buzz", fizzbuzz_say(7));
+	TEST_ASSERT_EQUAL_STRING("Buzz", fizzbuzz_say(21));
+	TEST_ASSERT_EQUAL_STRING("Buzz", fizzbuzz_say(49));
+	TEST_ASSERT_EQUAL_STRING("Buzz", fizzbuzz_say(63));
+}
+
+void test_fizzbuzz_fizzbuzz(void){
+	TEST_ASSERT_EQUAL_STRING("FizzBuzz", fizzbuzz_say(14));
+	TEST_ASSERT_EQUAL_STRING("FizzBuzz", fizzbuzz_say(28));
+	TEST_ASSERT_EQUAL_STRING("FizzBuzz", fizzbuzz_say(56));
+}
+
+void test_fizzbuzz_dizz(void){
+	TEST_ASSERT_EQUAL_STRING("Dizz!", fizzbuzz_say(15));
+	TEST_ASSERT_EQUAL_STRING("Dizz!", fizzbuzz_say(30));
+	TEST_ASSERT_EQUAL_STRING("Dizz!", fizzbuzz_say(45));
+	TEST_ASSERT_EQUAL_STRING("Dizz!", fizzbuzz_say(60));
+}
+
+void test_fizzbuzz_ruzz(void){
+	TEST_ASSERT_EQUAL_STRING("Ruzz", fizzbuzz_say(24));
+	TEST_ASSERT_EQUAL_STRING("Ruzz", fizzbuzz_say(48));
+	TEST_ASSERT_EQUAL_STRING("Ruzz", fizzbuzz_say(72));
+	TEST_ASSERT_EQUAL_STRING("Ruzz", fizzbuzz_say(96));
+}
+
+void test_fizzbuzz_numbers(void){
+	TEST_ASSERT_EQUAL_STRING("1", fizzbuzz_say(1));
+	TEST_ASSERT_EQUAL_STRING("5", fizzbuzz_say(5));
+	TEST_ASSERT_EQUAL_STRING("3", fizzbuzz_say(3));
+	TEST_ASSERT_EQUAL_STRING("11", fizzbuzz_say(11));
+}
+
 int main(int argc, char **argv)
 {
 	UNITY_BEGIN();
@@ -86,6 +126,12 @@ int main(int argc, char **argv)
 	RUN_TEST(test_fizzbuzz_10);
 	RUN_TEST(test_fizzbuzz_11);
 	RUN_TEST(test_fizzbuzz_12);
+	RUN_TEST(test_fizzbuzz_fizz);
+	RUN_TEST(test_fizzbuzz_buzz);
+	RUN_TEST(test_fizzbuzz_fizzbuzz);
+	RUN_TEST(test_fizzbuzz_dizz);
+	RUN_TEST(test_fizzbuzz_ruzz);
+	RUN_TEST(test_fizzbuzz_numbers);
 
 	return UNITY_END();
 }
