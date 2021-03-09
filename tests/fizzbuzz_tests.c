@@ -93,7 +93,7 @@ void test_fizzbuzz_dizz(void){
 	TEST_ASSERT_EQUAL_STRING("Dizz!", fizzbuzz_say(15));
 	TEST_ASSERT_EQUAL_STRING("Dizz!", fizzbuzz_say(30));
 	TEST_ASSERT_EQUAL_STRING("Dizz!", fizzbuzz_say(45));
-	TEST_ASSERT_EQUAL_STRING("Dizz!", fizzbuzz_say(60));
+	TEST_ASSERT_EQUAL_STRING("Dizz!", fizzbuzz_say(75));
 }
 
 void test_fizzbuzz_ruzz(void){
